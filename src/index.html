@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>AngularMSALDemo</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- bootstrap reference used for styling the page -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheeet" href="styles.css" />
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <div class="container body-content">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="row">
+          <div class="col-lg-3 logo">
+            <a href="#">
+              <img src="assets/LOGO.png" />
+            </a>
+          </div>
+          <div class="col-lg-9">
+              <h2 class="page-header">
+                <small>DEMO with Angular, Microsoft Authentication Library (MSAL) and the Microsoft GRAPH(MSGRAPH)</small>
+              </h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <app-root></app-root>
+
+    <footer id="footer" class="footer">
+      <hr />
+      <p>
+        <script>
+          var d = new Date();
+          var n = d.getFullYear();
+          document.getElementById("footer").innerHTML = '©' + n + ' - LOBApps Inc., All Rights Reserved';
+        </script>
+      </p>
+    </footer>
+  </div>
+
+  <!-- This app uses cdn to reference msal.js (recommended).
+     You can also download it from: https://github.com/AzureAD/microsoft-authentication-library-for-js -->
+  <!-- <script src="https://secure.aadcdn.microsoftonline-p.com/lib/0.1.1/js/msal.min.js"></script> -->
+
+  <!-- The 'bluebird' and 'fetch' references below are required if you need to run this application on Internet Explorer -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+<!--Bluebird is required for IE 11 -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.4/bluebird.min.js" class="pre"></script>
+<script src="https://secure.aadcdn.microsoftonline-p.com/lib/0.1.1/js/msal.min.js"></script>
+
+</body>
+
+</html>

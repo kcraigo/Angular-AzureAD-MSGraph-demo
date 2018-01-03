@@ -1,0 +1,126 @@
+<div id="container-fluid">
+  <!--Search By Name - Return is an Array -->
+  <p>People Finder component - <strong>(Child)</strong></p>
+  <table class="table table-striped">
+      <tr>
+          <td colspan="3">
+              <footer class="blockquote-footer">https://graph.microsoft.com/v1.0/me/people?$search=testUser - (searching other user profiles requires admin consent)</footer>
+          </td>
+      </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>
+        <label class="center-block">Search By Name:
+          <input type="text" class="form-control" id="name" [(ngModel)]="searchName" placeholder="Name" />
+        </label>
+      </td>
+      <td>
+        <button class="btn btn-primary btn-sm" (click)="searchByName()">
+          <i class="material-icons">search</i>
+        </button>
+      </td>
+      <td>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>JobTitle</th>
+              <th>UserPrincipalName</th>
+              <th>Department</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let person1 of person">
+              <td>{{person1?.displayName}}</td>
+              <td>{{person1?.jobTitle}}</td>
+              <td>{{person1?.userPrincipalName}}</td>
+              <td>{{person1?.department}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+
+    </tr>
+
+    <!--Search By UserPrincipalName - Return is an Object -->
+    <tr>
+        <td colspan="3">
+            <footer class="blockquote-footer">https://graph.microsoft.com/beta/users/testUser@[YOUR COMPANY].com</footer>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          <label class="center-block">Search By userPrincipalName:
+            <input type="text" class="form-control" id="userPrincipalName" [(ngModel)]="userPrincipalhName" placeholder="UserPrinicpalName" />
+          </label>
+        </td>
+        <td>
+          <button class="btn btn-primary btn-sm" (click)="searchByUserPrincipalName()">
+            <i class="material-icons">search</i>
+          </button>
+        </td>
+        <td>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>JobTitle</th>
+                <th>UserPrincipalName</th>
+                <th>Department</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{person2?.displayName}}</td>
+                <td>{{person2?.jobTitle}}</td>
+                <td>{{person2?.userPrincipalName}}</td>
+                <td>{{person2?.department}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+      <!--Search By UserPrincipalName - Return is an Object -->
+    <tr>
+        <td colspan="3">
+            <footer class="blockquote-footer">https://graph.microsoft.com/beta/users/testUser@[YOUR COMPANY].com/manager</footer>
+        </td>
+    </tr>
+    <tr>
+        <td>
+          <label class="center-block">Search By UserPrincipalName then Return the Users Manager:
+            <input type="text" class="form-control" id="searchNameForManager" [(ngModel)]="searchNameForManager" placeholder="UserPrinicpalName" />
+          </label>
+        </td>
+        <td>
+          <button class="btn btn-primary btn-sm" (click)="searchByNameThenCallManager()">
+            <i class="material-icons">search</i>
+          </button>
+        </td>
+        <td>
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>JobTitle</th>
+                <th>UserPrincipalName</th>
+                <th>Department</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{person3?.displayName}}</td>
+                <td>{{person3?.jobTitle}}</td>
+                <td>{{person3?.userPrincipalName}}</td>
+                <td>{{person3?.department}}</td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+  </table>
+</div>
