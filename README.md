@@ -8,6 +8,7 @@ and
 [Authenticate your users to Azure AD using the Microsoft Authentication Library (MSAL) in an Angular 2 app — Microsoft Graph
 Part 2 of …](https://medium.com/@kcraigo/authenticate-your-users-to-azure-ad-using-the-microsoft-authentication-library-msal-in-an-angular-890217bf11c1)
 
+## Register the app with (https://apps.dev.microsoft.com/) to get the App ID / Client Id
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.3.
 
