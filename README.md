@@ -1,4 +1,6 @@
 # coffeeManager
+This repository is now Archived!
+
 This demo is part of my Medium.com blog posts -
 [Authenticate your users to Azure AD using the Microsoft Authentication Library (MSAL) in an Angular 2 app
 Part 1 of …](https://medium.com/@kcraigo/authenticate-your-users-to-azure-ad-using-the-microsoft-authentication-library-msal-in-an-angular-834ac463d16a)
